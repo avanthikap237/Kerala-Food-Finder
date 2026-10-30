@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kerala Food Finder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="#">Taste of <span>Kerala</span></a>
+    <nav><a href="#discover">Discover</a><a href="#about">About</a></nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">A LITTLE TASTE OF GOD'S OWN COUNTRY</p>
+      <h1>Find your next<br><span>Kerala favourite.</span></h1>
+      <p class="hero-copy">Explore much-loved dishes from across Kerala — from comforting breakfasts to flavour-packed biryanis.</p>
+      <a class="hero-link" href="#discover">Explore dishes <span>↓</span></a>
+    </section>
+
+    <section class="discover container" id="discover">
+      <div class="section-top">
+        <div>
+          <p class="eyebrow dark">EXPLORE THE FLAVOURS</p>
+          <h2>What are you craving?</h2>
+          <p class="subcopy">Search dishes or filter by food type and region.</p>
+        </div>
+        <div class="count" id="resultCount" aria-live="polite"></div>
+      </div>
+
+      <div class="controls">
+        <input id="searchInput" type="search" placeholder="Search dishes, e.g. puttu or biryani" aria-label="Search dishes">
+        <select id="typeFilter" aria-label="Filter by food type">
+          <option value="all">All food types</option>
+          <option value="Veg">Vegetarian</option>
+          <option value="Non-veg">Non-vegetarian</option>
+        </select>
+        <select id="regionFilter" aria-label="Filter by region">
+          <option value="all">All regions</option>
+          <option value="Malabar">Malabar</option>
+          <option value="Central Kerala">Central Kerala</option>
+          <option value="Travancore">Travancore</option>
+          <option value="Across Kerala">Across Kerala</option>
+        </select>
+      </div>
+
+      <div class="chips" aria-label="Quick filters">
+        <button class="chip active" data-quick="all">All dishes</button>
+        <button class="chip" data-quick="Biryani">Biryani</button>
+        <button class="chip" data-quick="Breakfast">Breakfast</button>
+        <button class="chip" data-quick="Seafood">Seafood</button>
+        <button class="chip" data-quick="Snacks">Snacks</button>
+      </div>
+
+      <div class="food-grid" id="foodGrid"></div>
+      <p class="empty" id="emptyMessage" hidden>No dishes found. Try a different search or filter.</p>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container about-inner">
+        <div><p class="eyebrow">FROM NORTH TO SOUTH</p><h2>Kerala, served on a plate.</h2></div>
+        <p>This student-made food guide introduces a selection of Kerala dishes and the regions they are associated with. Food traditions can vary from family to family and place to place.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer> Taste of Kerala · A student web project · Dish information is for learning and discovery.</footer>
+
+  <dialog id="dishDialog">
+    <button class="close" id="closeDialog" aria-label="Close">×</button>
+    <div id="dialogContent"></div>
+  </dialog>
+  <script src="script.js"></script>
+</body>
+</html>
